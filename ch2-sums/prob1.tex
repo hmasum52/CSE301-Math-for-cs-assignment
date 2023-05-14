@@ -1,0 +1,17 @@
+\subsection{Problem 1(2.11)}
+\begin{flushleft}
+\textbf{Solution: }
+\par
+$$
+\begin{aligned}
+L . H . S & =\sum_{0 \leq k<n}\left(a_{k+1}-a_k\right) b_k \\
+& =\sum_{0 \leq k<n} a_{k+1} b_k-\sum_{0 \leq k<n} a_k b_k \\
+& =\sum_{0 \leq k<n} a_{k+1} b_k-\sum_{1 \leq k+1 \leq n} a_{k+1} b_{k+1} -a_0b_0  + a_nb_n\\
+& =\sum_{0 \leq k<n} a_{k+1} b_k-\sum_{0 \leq k \leq n-1} a_{k+1} b_{k+1}-a_0b_0 + a_nb_n \\
+& =a_n b_n-a_0 b_0+\sum_{0 \leq k<n} a_{k+1} b_k-\sum_{0 \leq k<n} a_{k+1} b_{k+1}\\
+& =a_n b_n-a_0 b_0-\sum_{0 \leq k<n} a_{k+1}\left(b_{k+1}-b_k\right)\\
+& =R \cdot H \cdot S
+\end{aligned}
+$$
+
+\end{flushleft}

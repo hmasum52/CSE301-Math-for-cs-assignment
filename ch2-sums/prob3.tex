@@ -1,0 +1,21 @@
+\subsection{Problem 3(2.14)}
+\textbf{}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+$\begin{aligned} 
+\sum_{k=1}^n k 2^k & =\sum_{k=1}^n\left(\sum_{j=1}^k 1\right)^k \\
+& =\sum_{k=1}^n \sum_{j=1}^k 2^k \\
+& =\sum_{1 \leq j \leq k \leq n} 2^k \\
+& =\sum_{1 \leq j \leq n} \sum_{j \leq k \leq n} 2^k \\
+& =\sum_{1 \leq j \leq n}\left(\sum_{0 \leq k \leq n} 2^k-\sum_{0 \leq k \leq j-1} 2^k\right) \\
+& =\sum_{1 \leq j \leq n}\left(2^{n+1} -1 -2^j + 1 \right) \\
+& =\sum_{1 \leq j \leq n} 2^{n+1}-\sum_{1 \leq j \leq n} 2^j \\
+& =2^{n+1} \sum_{1 \leq j \leq n} 1-\left(\sum_{0 \leq j \leq n} 2^j-1\right) \\
+& =n 2^{n+1}-\left(2^{n+1}-1-1\right) \\
+& =n 2^{n+1}-\left(2^{n+1}-2\right)
+\end{aligned}
+$
+\end{flushleft}

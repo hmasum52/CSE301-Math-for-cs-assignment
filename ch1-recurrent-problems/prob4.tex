@@ -1,0 +1,27 @@
+\subsection{Problem 4(1.11-a)}
+\textbf{A Double Tower of Hanoi contains 2n disks of n different sizes, two of
+each size. As usual, we're required to move only one disk at a time,
+without putting a larger one over a smaller one. How many moves does it take to transfer a double tower from one peg to another, if disks of equal size are indistinguishable from each
+other?}
+\par
+
+\begin{flushleft}
+\textbf{Solution}
+\par
+Let $D_n$ be the number of moves required for a double tower of Hanoi problem.
+For A Double Tower of Hanoi instead of moving the smallest $n-1$ disk to the intermediate peg, we need to move $2(n-1)$ of them in $D_{n-1}$ moves. Also now there are two largest disks that we have to the destination peg. Finally, we have to move $2(n-1)$ dist to the destination in $D_{n-1}$ moves more.\par
+Therefore, $D_n = 2D_{n-1}+2$.
+\par
+We know the number of moves required for an original tower of Hanoi problem with n disk is, $T_n = 2^n-1$
+Now if we consider moving two same-sized disks as a single move, we can get the number of moves required for 2n disk by multiplying $T_n$ by 2.
+\par 
+That is, 
+$$
+\begin{aligned}
+D_n & = 2T_n\\
+&   = 2(2^n-1)\\
+&   = 2^{n+1} - 2
+\end{aligned}
+$$
+
+\end{flushleft}

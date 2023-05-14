@@ -1,0 +1,48 @@
+\subsection{Problem 4(2.19)}
+\textbf{Use a summation factor to solve the recurrence
+$$
+\begin{aligned}
+T_0 & =5 \\
+2 T_n & =n T_{n-1}+3 \cdot n !, \quad \text { for } n>0 .
+\end{aligned}
+$$}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+Given recurrence,
+$$
+\begin{aligned}
+T_0 & =5 \\
+2 T_n & =n T_{n-1}+3 \cdot n !
+\end{aligned}
+$$
+Comparing with $a_n T_n=b_n T_{n-1}+c_n$, we get
+$$
+a_n=2, b_n=n \text { and } c_n=3 \cdot n !
+$$
+So, the summation factor,
+$$
+\begin{aligned}
+s_n & =\frac{a_{n-1} a_{n-2} \cdots a_1}{b_n b_{n-1} \cdots b_2} \\
+& =\frac{2 \cdot 2 \cdot \cdots 2}{n(n-1) \cdots 2} \\
+& =\frac{2^{n-1}}{n !}
+\end{aligned}
+$$
+Therefore,
+$$
+\begin{aligned}
+T_n & =\frac{1}{s_n a_n}\left(s_1 b_1 T_0 + \sum_{k=1}^n s_k c_k\right) \\
+& =\frac{1}{s_n a_n}\left(\frac{2^{1-1}}{1 !} \cdot 1 \cdot 5+\sum_{k=1}^n \frac{2^{k-1}}{k !} \cdot 3 \cdot k !\right) \\
+& =\frac{1}{\frac{2^{n-1}}{n !}} \cdot 2\left(\frac{n !}{2^n}\left(5+3 \sum_{k=1}^n 2^{k-1}\right)\right. \\
+& =\frac{n !}{2^n}\left(5+3\left(2^n-1\right)\right) \\
+& =\frac{n !}{2^n}\left(2+3 \cdot 2^n\right) \\
+& =n !\left(2^{1-n}+3\right) \quad
+\end{aligned}
+$$
+
+\end{flushleft}
+
+
+

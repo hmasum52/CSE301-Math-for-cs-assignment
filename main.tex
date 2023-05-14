@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{graphicx,fancyhdr,amsmath,amssymb,amsthm,subfig,url,hyperref}
+\usepackage[margin=1in]{geometry}
+% required for tikz picture
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+% required for markdown suport
+\usepackage[settings, fencedCode]{markdown}
+\usepackage{parskip}
+
+\usepackage{outline} \usepackage{pmgraph} \usepackage[normalem]{ulem}
+\usepackage{graphicx} \usepackage{verbatim}
+
+%----------------------- Macros and Definitions --------------------------
+
+%%% FILL THIS OUT
+\newcommand{\studentname}{Hasan Masum}
+\newcommand{\suid}{1805052}
+\newcommand{\exerciseset}{Chapter 1}
+%%% END
+\renewcommand{\theenumi}{\bf \Alph{enumi}}
+
+\fancypagestyle{plain}{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sffamily\bfseries\large Mathematical Analysis for Computer Science}
+\fancyhead[LO,RE]{\sffamily\bfseries\large CSE 301}
+\fancyfoot[LO,RE]{\sffamily\bfseries\large \studentname: \suid @ugrad.cse.buet.ac.bd}
+\fancyfoot[RO,LE]{\sffamily\bfseries\thepage}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+
+
+\begin{document}
+\newpage
+
+\section{Chapter-1: Recurrent Problems}
+
+\input{ch1-recurrent-problems/prob1}
+\input{ch1-recurrent-problems/prob2}
+\input{ch1-recurrent-problems/prob3}
+\input{ch1-recurrent-problems/prob4}
+\input{ch1-recurrent-problems/prob5}
+
+\newpage
+\section{Chapter-2: Sums}
+
+\input{ch2-sums/prob1}
+\input{ch2-sums/prob2}
+\newpage
+\input{ch2-sums/prob3}
+\input{ch2-sums/prob4}
+\input{ch2-sums/prob5}
+\newpage
+\input{ch2-sums/prob6}
+\newpage
+\input{ch2-sums/prob7}
+\input{ch2-sums/prob8}
+
+\newpage
+\section{Chapter-4: Number theory}
+
+
+\end{document}

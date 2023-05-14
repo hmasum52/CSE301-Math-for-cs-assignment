@@ -1,0 +1,43 @@
+\subsection{Problem 6(2.21)}
+\begin{flushleft}
+    \textbf{Solution: }
+    Let $ S_n = \sum_{k=0}^{n} (-1)^{n-k} $
+    \par
+    Now,
+    % solve using perturbation method
+    $$
+        \begin{aligned}
+            S_{n+1}   & = \sum_{k=0}^{n+1} (-1)^{n+1-k}  \\
+            \Rightarrow \sum_{k=0}^{n} (-1)^{n+1-k} + (-1)^{n+1-(n+1)}   & = (-1)^{n+1-0} + \sum_{k=1}^{n+1} (-1)^{n+1-k}                \\
+            \Rightarrow \sum_{k=0}^{n} (-1)^{n-k} \cdot (-1)^1 + (-1)^0   & = (-1)^{n+1} + \sum_{1 \leq k+1 \leq n+1}^{} (-1)^{n+1-(k+1)} \\
+            \Rightarrow -S_n + 1 & = (-1)^{n+1} + \sum_{0 \leq k \leq n} (-1)^{n-k}              \\
+            \Rightarrow  -S_n + 1 & = (-1)^{n+1} + S_n              \\
+            \Rightarrow 2S_n & = 1 + (-1)^{n+1} \\
+            \Rightarrow S_n & = \frac{1 + (-1)^{n+1}}{2} \\
+        \end{aligned}
+    $$
+
+    \par
+
+    Again let, $ T_n = \sum_{k=0}^{n} (-1)^k k $
+    \par
+    Now,
+    % solve using perturbation method
+    $$
+    \begin{aligned}
+        T_{n+1} &= \sum_{k=0}^{n+1} (-1)^k k \\
+        \Rightarrow T_{n+1} &= (-1)^{n+1-0} \cdot 0 + \sum_{k=1}^{n+1} (-1)^{n+1-k} k \\
+        \Rightarrow \sum_{k=0}^{n} (-1)^{n+1-k}k + (-1)^{n+1-(n+1)} \cdot (n+1) &= \sum_{1 \leq k+1 \leq n+1} (-1)^{n+1-(k+1)}(k+1)\\
+        \Rightarrow \sum_{k=0}^{n} (-1)^{n-k} \cdot k \cdot (-1)^1 + (n+1) &= \sum_{0 \leq k \leq n} (-1)^{n-k}(k+1)\\
+        \Rightarrow -T_n + (n+1) &= \sum_{0 \leq k \leq n} (-1)^{n-k}k + \sum_{0 \leq k \leq n} (-1)^{n-k} \\
+        \Rightarrow -T_n + (n+1) &= T_n + S_n \\
+        \Rightarrow 2T_n &= (n+1) - S_n \\
+        \Rightarrow T_n &= \frac{(n+1) - S_n}{2} \\
+                        &= \frac{(n+1) - \frac{1 + (-1)^{n+1}}{2}}{2} \\
+                        &= \frac{2(n+1) - (1 + (-1)^{n+1})}{4} \\
+                        &= \frac{2n + 2 - 1 - (-1)^{n+1}}{4} \\
+                        &= \frac{2n + 1 + (-1)^{n+1}}{4} \\
+    \end{aligned}
+    $$
+
+\end{flushleft}

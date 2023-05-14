@@ -1,0 +1,43 @@
+% \begin{tikzpicture}[
+% roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
+% squarednode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+% ]
+% %Nodes
+% \node[squarednode]      (maintopic)                              {2};
+% \node[roundnode]        (uppercircle)       [above=of maintopic] {1};
+% \node[squarednode]      (rightsquare)       [right=of maintopic] {3};
+% \node[roundnode]        (lowercircle)       [below=of maintopic] {4};
+
+% %Lines
+% \draw[->] (uppercircle.south) -- (maintopic.north);
+% \draw[->] (maintopic.east) -- (rightsquare.west);
+% \draw[->] (rightsquare.south) .. controls +(down:7mm) and +(right:7mm) .. (lowercircle.east);
+% \end{tikzpicture}
+
+\subsection{Problem 1(1.5)} 
+\textbf{A "Venn diagram" with three overlapping circles is often used to illustrate
+the eight possible subsets associated with three given sets.Can the sixteen possibilities that arise with four given sets be illustrated by four overlapping circles?}
+
+\par
+
+\begin{flushleft}
+\textbf{Solution: } \par
+Let $T_n$ be the number of subsets illustrated by $n$ overlapping circles.\\
+Now,
+$$
+\begin{array}{l}
+T_1=2 \\
+T_2=4=2+1 \times 2=T_1+1 \times 2 \\
+T_3=8=4+2 \times 2=T_2+2 \times 2 \\
+\vdots \\
+T_n=T_{n-1}+(n-1) \times 2
+\end{array}
+$$
+So for 4 overlapping circles,
+$$
+T_4=T_3+(4-1) \times 2=8+6=14
+$$
+We can see 4 overlapping circles at max can illustrate 14 possibilities (subsets).
+Therefore, sixteen possibilities that arise with four given sets can't be illustrated by four overlapping
+circles.
+\end{flushleft}

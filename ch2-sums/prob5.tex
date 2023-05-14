@@ -1,0 +1,26 @@
+\subsection{Problem 5}
+\textbf{}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+Let $ S_n = \sum_{k=0}^{n} kH_k $
+\par
+Now,
+% solve using perturbation method
+$$
+\begin{aligned}
+    S_{n+1} &= \sum_{k=0}^{n+1} kH_k \\
+    \Rightarrow S_{n+1} &= 0 \cdot H_0 + \sum_{k=1}^{n+1} kH_k \\
+    \Rightarrow S_{n+1} &= \sum_{1 \leq k+1 \leq n+1}^{} (k+1)H_{k+1} \\
+    \Rightarrow S_{n+1} &= \sum_{0 \leq k \leq n} (k+1)(H_k + \frac{1}{k+1}) \\
+    \Rightarrow S_{n+1} &= \sum_{0 \leq k \leq n} (1 + kH_k + H_k) \\
+    \Rightarrow S_{n+1} &= \sum_{0 \leq k \leq n} 1 + \sum_{0 \leq k \leq n} kH_k + \sum_{0 \leq k \leq n} H_k \\
+    \Rightarrow S_n + (n+1)H_{n+1} &= (n+1) + S_n + \sum_{0 \leq k \leq n} H_k \\
+    % find summation of H_k
+    \Rightarrow \sum_{0 \leq k \leq n} H_k &= (n+1) - (n+1)H_{n+1} \\
+    & = (n+1)(1-H_{n+1})  
+\end{aligned}
+$$
+\end{flushleft}

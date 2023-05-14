@@ -1,0 +1,62 @@
+\subsection{Problem 3(1.10)}
+\textbf{Let $Q_n$ be the minimum number of moves needed to transfer a tower of $n$ disks from A to $B$ if all moves must be clockwise - that is, from $A$ to $B$, or from $B$ to the other peg, or from the other peg to $A$. Also let $R_n$ be the minimum number of moves needed to go from $B$ back to $A$ under this restriction. Prove that
+$$
+Q_n=\left\{\begin{array}{ll}
+0, & \text { if } n=0 ; \\
+2 R_{n-1}+1, & \text { if } n>0 ;
+\end{array} \quad R_n=\left\{\begin{array}{ll}
+0, & \text { if } n=0 ; \\
+Q_n+Q_{n-1}+1, & \text { if } n>0
+\end{array}\right.\right.
+$$
+You need not solve these recurrences}
+\par
+\begin{flushleft}
+\textbf{Solution:}
+\par
+Let, three disks are $A, B$ and $C$. All the moves are cloclewice.
+
+To move $n$ disks from $A$ to $B$, we need -
+\begin{itemize}
+    \item $R_{n-1}$ moves to transfer $(n-1)$ smaller disks to C clockwise.
+    \item  1 move to transfer the largest dish to $B$
+    \item And Finally $R_{n-1}$ moves more to tranfen $(n-1)$ smaller disks to $B$ clocliwise.
+\end{itemize}
+So, $Q_n=R_{n-1}+1+R_{n-1}=2 R_{n-1}+1$, if $n>0$
+\par
+Therefore, 
+$$
+Q_n=\left\{\begin{array}{ll}
+0, & \text { if } n=0 ; \\
+2 R_{n-1}+1, & \text { if } n>0 ;
+\end{array} \quad 
+\right.
+$$
+
+
+Again to move $n$ disks from $B$ to $A$ in clockwise direction, we need -
+\begin{itemize}
+    \item  $R_{n-1}$ moves to transfer $(n-1)$ smaller disks to $A$
+    \item 1 Move to transfer the largest disk to $B$
+    \item $Q_{n-1}$ moves to transfer $(n-1)$ smaller disks to $B$
+    \item 1 move to transfer the largest disk to $A$
+    \item $R_{n-1}$ moves again to transfer $(n-1)$ smaller disks to $A$
+\end{itemize}
+So,
+$$
+\begin{aligned}
+R_n & =R_{n-1}+1+Q_{n-1}+1+R_{n-1} \\
+& =\left(2 R_{n-1}+1\right)+Q_{n-1}+1 \\
+\therefore R_n & =Q_n+Q_{n-1}+1 \text { when } n>0
+\end{aligned}
+$$
+
+Therefore,
+$$
+R_n=\left\{\begin{array}{ll}
+0, & \text { if } n=0 ; \\
+Q_n+Q_{n-1}+1, & \text { if } n>0
+\end{array}\right.
+$$
+
+\end{flushleft}

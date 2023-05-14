@@ -1,0 +1,33 @@
+\subsection{Problem 8(2.29)}
+\textbf{Evaluate the sum $ \sum_{k=1}^{n} (-1)^k/(4k^2-1)$ using partial fraction.}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+Here,
+$$
+\begin{aligned}
+    \frac{k}{4k^2-1} & = \frac{k}{(2k-1)(2k+1)} \\
+    % partial fraction using thumb rule
+    & = \frac{1/2}{(2k-1)(2\cdot \frac{1}{2} + 1)} + \frac{-1/2}{(2\cdot \frac{-1}{2} - 1)(2k+1)} \\
+    % take 1/4 common
+    & = \frac{1}{4} \left(  \frac{1}{2k-1} + \frac{1}{2k+1} \right)  \\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+    \sum_{k=1}^{n} \frac{(-1)^k}{4k^2-1} & = \sum_{k=1}^{n} \frac{(-1)^k}{4} \left(  \frac{1}{2k-1} + \frac{1}{2k+1} \right) \\
+    & = \frac{1}{4} \left( \sum_{k=1}^{n} \frac{(-1)^k}{2k-1} + \sum_{k=1}^{n} \frac{(-1)^{k}}{2k+1} \right) \\
+    % take 1st term out of the 1st fraction and last term out of the 2nd fraction
+    & = \frac{1}{4} \left( \frac{(-1)^1}{2\cdot1-1} + \sum_{k=2}^{n} \frac{(-1)^k}{2k-1} +  \frac{(-1)^n}{2n+1} + \sum_{k=1}^{n-1} \frac{(-1)^{k}}{2k+1} \right) \\
+    % simplify
+    & = \frac{1}{4} \left( \frac{(-1)^n}{2n+1} - 1 +  \sum_{k+1=2}^{n} \frac{(-1)^{k+1}}{2k+2-1} + \sum_{k=1}^{n-1} \frac{(-1)^{k}}{2k+1} \right) \\
+    & = \frac{1}{4} \left( \frac{(-1)^n}{2n+1} - 1 +  \sum_{k+1-1=2-1}^{n-1} \frac{(-1)^{k} \cdot (-1)^1}{2k+1}  + \sum_{k=1}^{n-1} \frac{(-1)^{k}}{2k+1} \right) \\
+    & = \frac{1}{4} \left( \frac{(-1)^n}{2n+1} - 1 -  \sum_{k=1}^{n-1} \frac{(-1)^{k}}{2k+1}  + \sum_{k=1}^{n-1} \frac{(-1)^{k}}{2k+1} \right) \\
+    & = \frac{1}{4} \left( \frac{(-1)^n}{2n+1} - 1 \right) \\
+\end{aligned}
+$$
+
+\end{flushleft}

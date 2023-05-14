@@ -1,0 +1,43 @@
+\subsection{Problem 2(1.6)}
+\textbf{Some of the regions defined by n lines in the plane are infinite, while
+others are bounded. What's the maximum possible number of bounded
+regions?}
+\par
+
+\begin{flushleft}
+\textbf{Solution:}
+\par
+
+Let, $R_n$ be the maximum number of bounded regions by $n$ lines.
+
+Now,
+$$
+\begin{array}{l}
+R_2=0 \\
+R_3=1=0+(3-2)=R_2+(3-2) \\
+R_4=3=1+(4-2)=R_3+(4-2) \\
+R_5=6=3+(5-3)=R_4+(5-2) \\
+\vdots \\
+R_n=R_{n-1}+(n-2)
+\end{array}
+$$
+So, Recurrence for the bounded region by $n$ lines,
+$$
+R_n=\left\{\begin{array}{l}
+0 \text { if } n \leq 2 \\
+R_n+(n-2), \text { if } n>2
+\end{array}\right.
+$$
+
+Now,
+$$
+\begin{aligned}
+R_n & =R_{n-1}+(n-2) \\
+& =R_{n-2}+(n-1-2)+(n-2) \\
+& =R_2+1+2+\cdots+(n-1-2)(n-2) \\
+& =0+1+2+\cdots+(n-1-2)(n-2) \\
+& =\frac{(n-2)(n-2+1)}{2} \\
+& =\frac{(n-2)(n-1)}{2}
+\end{aligned}
+$$
+\end{flushleft}

@@ -1,0 +1,19 @@
+\subsection{Problem }
+\textbf{What is the largest positive integer n for which $n^3 + 100$ is divisible by $n + 10$?}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+$$
+\begin{aligned}
+n^3 + 100 &= n^3 + 10^3 - 900 \\
+&= (n + 10)(n^2 - 10 \cdot n + 10^2) - 900 \\
+&= (n + 10)(n^2 - 10n + 100) - 900 \\
+\end{aligned}
+$$
+Here $n + 10$ is a factor of $n^3 + 100$ if and only if $n + 10$ is a factor of $900$. 
+That is $ (n+1) \cdot k = 900$ for some integer $k$.
+If we take $ k = 1$, then $n + 10 = 900$ and $n = 890$.
+So, the largest positive integer $n$ for which $n^3 + 100$ is divisible by $n + 10$ is $890$.
+\par
+\end{flushleft}

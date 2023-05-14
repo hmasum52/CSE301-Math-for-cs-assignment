@@ -1,0 +1,23 @@
+\subsection{Problem 2}
+\textbf{Show that the fraction $ \frac{12n+1}{30n+2}$ is irreducible for all positive integers n}
+\par
+
+\begin{flushleft}
+    \textbf{Solution: }
+    \par
+    % long division of 12n+1 by 30n+2
+    Here
+    % gcd of 12n+1 and 30n+2 is 1
+    $$
+    \begin{aligned}
+        gcd(12n+1,30n+2) &= gcd(12n+1, (30n+2) mod (12n+1))\\
+        & = gcd(12n+1, (30n+2) - 2(12n+1))\\
+        & = gcd(12n+1, 6n)\\
+        & = gcd(6n, (12n+1) mod 6n)\\
+        & = gcd(6n, (12n+1) - 2(6n))\\
+        & = gcd(6n, 1)\\
+        \Rightarrow gcd(12n+1,30n+2) & = 1  \\
+    \end{aligned}
+    $$
+So $12n+1$ and $30n+2$ are co-prime. Therefore the fraction $\frac{12n+1}{30n+2}$ is irreducible for all positive integers n.
+\end{flushleft}

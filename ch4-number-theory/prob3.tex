@@ -1,0 +1,36 @@
+\subsection{Problem 3}
+\textbf{Call a number prime looking if it is composite but not divisible by 2, 3, or 5. The three smallest prime-looking numbers are 49, 77, and 91. There are 168 prime numbers less than 1000. How many
+prime-looking numbers are there less than 1000?}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+Let A, B, C be the number of numbers less than 1000 that are divisible by 2, 3, 5 respectively. 
+Then, by inclusion-exclusion principle, the number of numbers that are divisible by at least one of 2, 3, 5 is,
+$$
+\begin{aligned}
+    n(A \cup B \cup C) & = n(A) + n(B) + n(C) - n(A \cap B) - n(A \cap C) - n(B \cap C) + n(A \cap B \cap C) \\ 
+    & = \left\lfloor \frac{1000}{2} \right\rfloor + \left\lfloor \frac{1000}{3} \right\rfloor + \left\lfloor \frac{1000}{5} \right\rfloor - \left\lfloor \frac{1000}{2 \times 3} \right\rfloor - \left\lfloor \frac{1000}{3 \times 5} \right\rfloor - \left\lfloor \frac{1000}{5 \times 2} \right\rfloor + \left\lfloor \frac{1000}{2 \times 3 \times 5} \right\rfloor \\
+    & = 500 + 333 + 200 - 166 - 100 - 66 + 33 \\
+    & = 734
+\end{aligned}
+$$
+Therefore the number of numbers that are not divisible by 2, 3, 5 is,
+$$
+\begin{aligned}
+    n(A^c \cap B^c \cap C^c) & = n(U) - n(A \cup B \cup C) \\
+    & = 1000 - 734 \\
+    & = 266
+\end{aligned}
+$$
+
+Given that there are 168 prime numbers less than 1000. So, the number of prime-looking numbers less than 1000 is,
+$$
+\begin{aligned}
+    n(A^c \cap B^c \cap C^c) - n(\text{prime numbers less than 1000}) & = 266 - 168 \\
+    & = 98
+\end{aligned}
+$$
+
+\end{flushleft}

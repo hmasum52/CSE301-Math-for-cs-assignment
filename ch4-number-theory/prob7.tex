@@ -1,0 +1,38 @@
+\subsection{Problem 7}
+\textbf{Prove that $a^p \equiv a \pmod{p}$, where p is any prime}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+% prove by induction
+\textbf{Base case:} For $a = 1$, $a^p = 1^p = 1 \equiv 1 \pmod{p}$\\
+\par
+\textbf{Inductive step:} Assume $a^p \equiv a \pmod{p}$ is true. We have to prove that $(a+1)^p \equiv a+1 \pmod{p}$.\\ 
+\par
+% binomial expansion of (a+1)^p
+$$
+\begin{aligned}
+    (a+1) ^ p & = \binom{p}{0} a^p + \binom{p}{1} a^{p-1} + \binom{p}{2} a^{p-2} + \dots + \binom{p}{p-1} a^1 + \binom{p}{p} a^0 \\
+    & = a^p + pa^{p-1} + \dots + 1 \\
+    & = (a^p+1) + p \cdot (a^{p-1}+\dots)  \\
+    & = (a^p+1) + pK \\
+\end{aligned}
+$$
+where $K = (a^{p-1}+\dots) $
+\par 
+Now, 
+$$
+\begin{aligned}
+    (a+1)^p \pmod{p} & = [(a^p+1) + pK] \pmod{p} \\
+    & = [ (a^p+1) \pmod{p} + (pK) \pmod{p} ] \pmod{p} \\
+    & = [ a^p \pmod{p} + 1 \pmod{p} + 0 ] \pmod{p} \\
+    & = (a + 1) \pmod{p}
+\end{aligned}
+$$
+\par
+Therefore, $(a+1)^p \equiv a+1 \pmod{p}$ is true.\\
+\par
+Therefore, by principle of mathematical induction, $a^p \equiv a \pmod{p}$ is true for all positive integers a and prime p.
+
+\end{flushleft}

@@ -1,0 +1,26 @@
+\subsection{Problem 8}
+\textbf{Evaluate $gcd(n! + 1, (n + 1)! + 1)$ }
+\par
+
+\begin{flushleft}
+    \textbf{Solution: }
+    \par
+    $$
+        \begin{aligned}
+            gcd(n!+1, (n + 1)! + 1) & = gcd((n+1)! + 1, n! + 1) \\
+            & = gcd( n! + 1, ((n+1)! + 1) \mod{(n! + 1)}) \\
+            & = gcd( n! + 1, (n+1)! + 1 - n \cdot (n!+1) ) \\
+            & = gcd( n! + 1, n! + 1 - n ) \\
+            & = gcd( n! + 1 - n, (n!+1) \mod{(n! + 1 - n}) ) \\
+            & = gcd( n! + 1 - n, n! + 1 - 1 \cdot (n! + 1 - n) ) \\
+            & = gcd( n! + 1 - n, n ) \\
+            & = gcd (n, (n! + 1 - n) \mod{n} ) \\
+            & = gcd (n, (n! + 1 -n) - (n-1)! \cdot n ) \\
+            & = gcd (n, 1 -n ) \\
+            & = gcd (n, n \mod{(1-n)} ) \\   
+            & = gcd (n, 1 -n - (-1) \cdot n ) \\
+            & = gcd (n, 1) \\
+            & = 1 \\
+        \end{aligned}
+    $$
+\end{flushleft}

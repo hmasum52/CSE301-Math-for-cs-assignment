@@ -1,0 +1,26 @@
+\subsection{Problem 4}
+\textbf{Let m and n be positive integers such that $ lcm(m, n) + gcd(m, n) = m + n $. Prove that one of the two
+numbers is divisible by the other.}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+Let gcd of m, n be g.\\
+We know that, $ gcd(m, n) \cdot lcm(m, n) = mn$ \\
+Now, 
+$$
+\begin{aligned}
+    lcm(m, n) + gcd(m, n) & = m + n \\
+    \Rightarrow \frac{mn}{g} + g & = m + n \\
+    \Rightarrow mn + g^2 & = gm + gn \\
+    \Rightarrow g^2 - gn & = gm - mn \\
+    \Rightarrow g(g - n) & = m(g - n) \\
+    \Rightarrow g(g-n) - m(g-n) & = 0 \\
+    \Rightarrow (g-m)(g-n) & = 0 \\
+    \Rightarrow g = m \text{ or } g = n 
+\end{aligned}
+$$
+So if g = m, then m divides n. If g = n, then n divides m.
+Therefore, one of the two numbers is divisible by the other.
+\end{flushleft}

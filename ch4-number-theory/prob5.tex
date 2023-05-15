@@ -1,0 +1,29 @@
+\subsection{Problem 5}
+\textbf{Show that for any positive integers a and b, the number (36a + b)(a + 36b) cannot be a power of 2.}
+\par
+
+\begin{flushleft}
+\textbf{Solution: }
+\par
+We will prove it by contradiction.\\
+Let, $ (36a+b) = 2^m \quad . . .(i) $ \\and $ (a+36b) = 2^n \quad . . .(ii) $ \\
+% substract (i) from (ii)
+Subtracting (ii) from (i), we get, \\
+$$
+\begin{aligned}
+    35a - 35b & = 2^m - 2^n \\
+    \Rightarrow 35(a-b) & = 2^n(2^{m-n} - 1) \\
+\end{aligned}
+$$
+Here $ 2^n $ is even and $ 2^{m-n} - 1 $ is odd. So, $ 2^n(2^{m-n} - 1) $ is odd.\\
+35 is odd. So $ (a-b) $ must be even.
+Therefore, 
+$$
+\begin{aligned}
+    35 &= 2^{m-n} -1 \\
+    \Rightarrow 36 &= 2^{m-n} \\
+\end{aligned}
+$$
+But 36 is not a power of 2. So, our assumption is wrong.\\
+Therefore, for any positive integers a and b, the number (36a + b)(a + 36b) cannot be a power of 2.
+\end{flushleft}
